@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logoSvg from "../../../assets/logo.svg";
-import ChooseMoneyAndLanguage from "../../../UI/molecules/ChooseMoneyAndLanguage";
+import ChooseMoneyAndLanguage from "../../../UI/organisms/ChooseMoneyAndLanguage";
 import SocialMedia from "../../../UI/molecules/SocialMedia/index";
 
 const Footer = () => {

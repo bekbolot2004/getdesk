@@ -4,7 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import Modal from "./Modal";
 
 const ChooseMoneyAndLanguage = () => {
-  let [isOpen, setIsOpen] = useState(true);
+  let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false);
@@ -13,6 +13,8 @@ const ChooseMoneyAndLanguage = () => {
   function openModal() {
     setIsOpen(true);
   }
+
+
   return (
     <>
       <button
@@ -21,7 +23,7 @@ const ChooseMoneyAndLanguage = () => {
       >
         <img src={global} alt="language" />
       </button>
-      <button className="h-[44px] w-[44px] flex items-center text-[#717171] hover:text-[#ED4040] mr-3">
+      <button onClick={openModal} className="h-[44px] w-[44px] flex items-center text-[#717171] hover:text-[#ED4040] mr-3">
         <p className="text-xl  font-light">RUB</p>
         <div className="pl-1">
           <svg
@@ -65,7 +67,7 @@ const ChooseMoneyAndLanguage = () => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-[1000px] transform overflow-hidden rounded-xl bg-white max-sm:p-3 p-6 text-left align-middle shadow-xl transition-all">
-                  <Modal closeModal={closeModal} />
+                  <Modal closeModal={closeModal}  />
                 </Dialog.Panel>
               </Transition.Child>
             </div>

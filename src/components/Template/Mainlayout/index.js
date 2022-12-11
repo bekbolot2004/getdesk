@@ -6,7 +6,7 @@ function MainLayout({ children }) {
   return (
     <>
       <Header />
-      <main className="min-h-[500px]">{children}</main>
+        <main className="min-h-[500px]">{children}</main>
       <Footer />
     </>
   );
